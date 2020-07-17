@@ -22,6 +22,7 @@ For other plugin managers, take care of the 'rtp' value. You must add the `vim` 
 
 Set this as your colorscheme:
 ```
+set termguicolors " This is needed if your terminal supports true colors
 colorscheme nisha
 ```
 ## Airline

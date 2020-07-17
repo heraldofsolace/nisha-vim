@@ -7,11 +7,10 @@ This is a dark colorscheme for Vim with warm muted colours.
 ### With [Vim-Plug](https://github.com/junegunn/vim-plug):
 
 ```
-Plug 'heraldofsolace/Nisha-Colorscheme', { 'rtp': 'vim' }
+Plug 'heraldofsolace/nisha-vim'
 ```
 Then run `vim +PlugInstall`
 
-For other plugin managers, take care of the 'rtp' value. You must add the `vim` folder to the rtp.
 
 ### Manual installation
 

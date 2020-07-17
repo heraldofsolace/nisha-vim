@@ -2,7 +2,7 @@
 " Author:      Aniket Bhattacharyea (aniketmail669@gmail.com)
 " Webpage:     https://github.com/heraldofsolace/Nisha-Colorscheme
 " Description: Calm as night
-" Last Change: 2020-07-16
+" Last Change: 2020-07-17
 
 hi clear
 
@@ -180,5 +180,23 @@ let g:terminal_ansi_colors = [
         \ '#99b7c2',
         \ '#ffffff',
         \ ]
+if has('nvim')
+      let g:terminal_color_0 = '#191a21'
+      let g:terminal_color_1 = '#ef233c'
+      let g:terminal_color_2 = '#307555'
+      let g:terminal_color_3 = '#836648'
+      let g:terminal_color_4 = '#5e3c7d'
+      let g:terminal_color_5 = '#75494a'
+      let g:terminal_color_6 = '#4f7684'
+      let g:terminal_color_7 = '#efe6dd'
+      let g:terminal_color_8 = '#767b8b'
+      let g:terminal_color_9 = '#f14358'
+      let g:terminal_color_10 = '#6bc29a'
+      let g:terminal_color_11 = '#c2aa91'
+      let g:terminal_color_12 = '#a27fc2'
+      let g:terminal_color_13 = '#ab797a'
+      let g:terminal_color_14 = '#99b7c2'
+      let g:terminal_color_15 = '#ffffff'
+  endif
 
 " Generated with RNB (https://github.com/romainl/vim-rnb)

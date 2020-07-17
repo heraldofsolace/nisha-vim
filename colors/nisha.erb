@@ -384,6 +384,11 @@ let g:terminal_ansi_colors = [
         \ '<%= color[0] %>',
 <% end -%>
         \ ]
+if has('nvim')
+  <% terminal_ansi_colors.each_with_index do |color, i| -%>
+    let g:terminal_color_<%= i %> = '<%= color[0] %>'
+  <% end -%>
+endif
 <% end -%>
 
 " Generated with RNB (https://github.com/romainl/vim-rnb)

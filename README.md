@@ -38,7 +38,22 @@ let g:airline_theme='nisha'
 
 ## Screenshots
 
-Coming soon!
+#### Python
+
+![python](screenshots/python.png)
+
+#### Python (folded)
+
+![python folded](screenshots/python_folded.png)
+
+#### Ruby
+
+![ruby](screenshots/ruby.png)
+
+#### Vue
+
+![vue](screenshots/vue.png)
+
 
 ## Light variant
 

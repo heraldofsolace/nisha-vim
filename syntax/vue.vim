@@ -20,6 +20,7 @@ function! s:is_language_present(lang)
     if empty(globpath(&runtimepath, 'syntax/' . a:language . '.vim'))
         return 0
     endif
+    return 1
 endfunction
 
 

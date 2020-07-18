@@ -29,7 +29,7 @@ let s:languages = [
 
 for s:language in s:languages
   let s:attr_pattern = has_key(s:language, 'pattern') ? s:language.pattern : s:attr('lang', s:language.name)
-  let s:start_pattern = '<' . s:language.tag . '\>\_[^>]*' . s:attr_pattern . '\_[^>]*>'
+  let s:start_pattern = '<' . s:language.in . '\>\_[^>]*' . s:attr_pattern . '\_[^>]*>'
 
 
   execute 'syntax include @' . s:language.name . ' syntax/' . s:language.name . '.vim'
@@ -37,7 +37,7 @@ for s:language in s:languages
   execute 'syntax region vue_' . s:language.name
               \ 'keepend'
               \ 'start=/' . s:start_pattern . '/'
-              \ 'end="</' . s:language.tag . '>"me=s-1'
+              \ 'end="</' . s:language.in . '>"me=s-1'
               \ 'contains=@' . s:language.name . ',vueSurroundingTag'
               \ 'fold'
 endfor

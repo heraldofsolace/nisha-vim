@@ -17,7 +17,7 @@ function! s:attr(name, value)
 endfunction
 
 function! s:is_language_present(lang)
-    if empty(globpath(&runtimepath, 'syntax/' . a:language . '.vim'))
+    if empty(globpath(&runtimepath, 'syntax/' . a:lang . '.vim'))
         return 0
     endif
     return 1

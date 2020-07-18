@@ -16,30 +16,39 @@ function! s:attr(name, value)
   return a:name . '=\("\|''\)[^\1]*' . a:value . '[^\1]*\1'
 endfunction
 
+function! s:is_language_present(lang)
+    if empty(globpath(&runtimepath, 'syntax/' . a:language . '.vim'))
+        return 0
+    endif
+endfunction
+
+
 let s:languages = [
-      \ {'name': 'less',       'in': 'style'},
-      \ {'name': 'pug',        'in': 'template', 'pattern': s:attr('lang', '\%(pug\|jade\)')},
-      \ {'name': 'haml',       'in': 'template'},
-      \ {'name': 'typescript', 'in': 'script', 'pattern': '\%(lang=\("\|''\)[^\1]*\(ts\|typescript\)[^\1]*\1\|ts\)'},
-      \ {'name': 'coffee',     'in': 'script'},
-      \ {'name': 'stylus',     'in': 'style'},
-      \ {'name': 'sass',       'in': 'style'},
-      \ {'name': 'scss',       'in': 'style'},
-      \ ]
+            \ {'name': 'less',       'in': 'style'},
+            \ {'name': 'pug',        'in': 'template', 'pattern': s:attr('lang', '\%(pug\|jade\)')},
+            \ {'name': 'haml',       'in': 'template'},
+            \ {'name': 'typescript', 'in': 'script', 'pattern': '\%(lang=\("\|''\)[^\1]*\(ts\|typescript\)[^\1]*\1\|ts\)'},
+            \ {'name': 'coffee',     'in': 'script'},
+            \ {'name': 'stylus',     'in': 'style'},
+            \ {'name': 'sass',       'in': 'style'},
+            \ {'name': 'scss',       'in': 'style'},
+            \ ]
 
 for s:language in s:languages
-  let s:attr_pattern = has_key(s:language, 'pattern') ? s:language.pattern : s:attr('lang', s:language.name)
-  let s:start_pattern = '<' . s:language.in . '\>\_[^>]*' . s:attr_pattern . '\_[^>]*>'
+    if s:is_language_present(s:language.name)
+        let s:attr_pattern = has_key(s:language, 'pattern') ? s:language.pattern : s:attr('lang', s:language.name)
+        let s:start_pattern = '<' . s:language.in . '\>\_[^>]*' . s:attr_pattern . '\_[^>]*>'
 
 
-  execute 'syntax include @' . s:language.name . ' syntax/' . s:language.name . '.vim'
-  unlet! b:current_syntax
-  execute 'syntax region vue_' . s:language.name
-              \ 'keepend'
-              \ 'start=/' . s:start_pattern . '/'
-              \ 'end="</' . s:language.in . '>"me=s-1'
-              \ 'contains=@' . s:language.name . ',vueSurroundingTag'
-              \ 'fold'
+        execute 'syntax include @' . s:language.name . ' syntax/' . s:language.name . '.vim'
+        unlet! b:current_syntax
+        execute 'syntax region vue_' . s:language.name
+                \ 'keepend'
+                \ 'start=/' . s:start_pattern . '/'
+                \ 'end="</' . s:language.in . '>"me=s-1'
+                \ 'contains=@' . s:language.name . ',vueSurroundingTag'
+                \ 'fold'
+    endif
 endfor
 
 syntax sync fromstart

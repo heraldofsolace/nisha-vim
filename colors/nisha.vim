@@ -2,7 +2,24 @@
 " Author:      Aniket Bhattacharyea (aniketmail669@gmail.com)
 " Webpage:     https://github.com/heraldofsolace/Nisha-Colorscheme
 " Description: Calm as night
-" Last Change: 2020-07-17
+" Last Change: 2020-07-19
+
+
+" Nisha: Dark colorscheme for Vim
+" Copyright (C) 2020  Aniket Bhattacharyea
+"
+" This program is free software: you can redistribute it and/or modify
+" it under the terms of the GNU General Public License as published by
+" the Free Software Foundation, either version 3 of the License, or
+" (at your option) any later version.
+"
+" This program is distributed in the hope that it will be useful,
+" but WITHOUT ANY WARRANTY; without even the implied warranty of
+" MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+" GNU General Public License for more details.
+"
+" You should have received a copy of the GNU General Public License
+" along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 hi clear
 
@@ -20,7 +37,7 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi Constant ctermbg=NONE ctermfg=139 cterm=NONE guibg=NONE guifg=#a27fc2 gui=NONE
     hi Error ctermbg=NONE ctermfg=203 cterm=NONE guibg=NONE guifg=#f14358 gui=NONE
     hi Function ctermbg=NONE ctermfg=72 cterm=NONE guibg=NONE guifg=#6bc29a gui=NONE
-    hi Identifier ctermbg=NONE ctermfg=209 cterm=NONE guibg=NONE guifg=#ff7d55 gui=NONE
+    hi Identifier ctermbg=NONE ctermfg=138 cterm=NONE guibg=NONE guifg=#ab797a gui=NONE
     hi Ignore ctermbg=NONE ctermfg=231 cterm=NONE guibg=NONE guifg=#efe6dd gui=NONE
     hi PreProc ctermbg=NONE ctermfg=209 cterm=NONE guibg=NONE guifg=#ff7d55 gui=NONE
     hi Special ctermbg=NONE ctermfg=209 cterm=NONE guibg=NONE guifg=#ff7d55 gui=NONE

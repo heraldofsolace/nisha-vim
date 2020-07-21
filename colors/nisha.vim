@@ -2,24 +2,7 @@
 " Author:      Aniket Bhattacharyea (aniketmail669@gmail.com)
 " Webpage:     https://github.com/heraldofsolace/Nisha-Colorscheme
 " Description: Calm as night
-" Last Change: 2020-07-19
-
-
-" Nisha: Dark colorscheme for Vim
-" Copyright (C) 2020  Aniket Bhattacharyea
-"
-" This program is free software: you can redistribute it and/or modify
-" it under the terms of the GNU General Public License as published by
-" the Free Software Foundation, either version 3 of the License, or
-" (at your option) any later version.
-"
-" This program is distributed in the hope that it will be useful,
-" but WITHOUT ANY WARRANTY; without even the implied warranty of
-" MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-" GNU General Public License for more details.
-"
-" You should have received a copy of the GNU General Public License
-" along with this program.  If not, see <https://www.gnu.org/licenses/>.
+" Last Change: 2020-07-21
 
 hi clear
 
@@ -53,7 +36,7 @@ if ($TERM =~ '256' || &t_Co >= 256) || has("gui_running")
     hi TabLineFill ctermbg=NONE ctermfg=16 cterm=NONE guibg=NONE guifg=#191a21 gui=NONE
     hi TabLineSel ctermbg=NONE ctermfg=72 cterm=NONE guibg=NONE guifg=#6bc29a gui=NONE
     hi Title ctermbg=NONE ctermfg=72 cterm=NONE guibg=NONE guifg=#6bc29a gui=NONE
-    hi CursorLine ctermbg=59 ctermfg=231 cterm=NONE guibg=#373a42 guifg=#efe6dd gui=NONE
+    hi CursorLine ctermbg=59 ctermfg=NONE cterm=NONE guibg=#373a42 guifg=NONE gui=NONE
     hi LineNr ctermbg=NONE ctermfg=102 cterm=NONE guibg=NONE guifg=#767b8b gui=NONE
     hi CursorLineNr ctermbg=59 ctermfg=139 cterm=NONE guibg=#373a42 guifg=#a27fc2 gui=NONE
     hi helpLeadBlank ctermbg=NONE ctermfg=NONE cterm=NONE guibg=NONE guifg=NONE gui=NONE
